@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -30,7 +29,8 @@ export class AppComponent {
     this.messages.push({
       name: this.username,
       timestamp: Date.now().toString(),
-      content: "Hello"
-    })
+      content: this.messageToSend
+    });
+    this.messageToSend = '';
   }
 }

@@ -16,7 +16,7 @@
       <br/>
     </div>
     <div class="sendMessage">
-      <input id="contentMessage" type="text"/>
+      <input type="text" [value]="messageToSend" (input)="messageToSend = $event.target.value">
       <button (click)="saveMessage()">Envoyer</button>
     </div>
   </div>
