@@ -4,30 +4,20 @@
   src="http://www.free-icons-download.net/images/red-chat-bubble-icon-64860.png">
   <h1>Bienvenue sur le chat</h1>
   <div id="chat">
-    <div class="displayMessage">
+    <div class="displayMessage" *ngFor="let message of messages">
       <div class="row">
-        <div class="message messageUser">
-          <span class="date">13/08/17 12:00</span>
+        <div class="message {{message.name == username ? 'messageUser' : ''}}">
+          <span class="date">{{message.timestamp | date : 'dd/MM/yyyy HH:mm'}}</span>
           <br/>
-          <span class="name">Mathieu</span>
-          <br/>
-          <span class="content"> Salut !</span>
+          <span class="name">{{message.name}}</span>
+          <span class="content">{{message.content}}</span>
         </div>
-        <br/>
       </div>
       <br/>
-      <div class="row">
-        <div class="message">
-          <span class="date">13/08/17 12:10</span>
-          <br/>
-          <span class="name">Florian</span><span class="content"> Salut !</span>
-          <br/>
-        </div>
-      </div>
     </div>
     <div class="sendMessage">
       <input id="contentMessage" type="text"/>
-      <button>Envoyer</button>
+      <button (click)="saveMessage()">Envoyer</button>
     </div>
   </div>
 </div>

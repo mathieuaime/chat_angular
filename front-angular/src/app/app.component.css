@@ -1,0 +1,41 @@
+/* You can add global styles to this file, and also import other style files */
+.chat {
+  height: 700px;
+  bottom: 10px;
+}
+
+.displayMessage {
+  height: 90%;
+}
+
+.sendMessage {
+  height: 10%;
+  width: 100%;
+  position: fixed;
+  bottom: 0px;
+}
+
+.date {
+  color: grey;
+  align-content: center;
+}
+
+.name {
+  float: left;
+  width: 80%;
+}
+
+.content {
+  float: right;
+  width: 80%;
+}
+
+.message {
+  width: 50%;
+  float: left;
+}
+
+.messageUser {
+  width: 50%;
+  float : right;
+}
