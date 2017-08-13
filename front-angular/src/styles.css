@@ -1,0 +1,25 @@
+/* You can add global styles to this file, and also import other style files */
+.date {
+  color: grey;
+  align-content: center;
+}
+
+.name {
+  float: left;
+  width: 80%;
+}
+
+.content {
+  float: right;
+  width: 80%;
+}
+
+.message {
+  width: 50%;
+  float: left;
+}
+
+.messageUser {
+  width: 50%;
+  float : right;
+}
